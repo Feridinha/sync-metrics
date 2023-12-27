@@ -17,7 +17,7 @@ interface Response {
 const fetchLogs = async () => {
     console.log("Fetching", Date.now())
     const response = await axios
-        .get<Response>(`https://syncc.feridinha.com/rooms`)
+        .get<Response>(`https://sync-api.feridinha.com/room/list`)
         .catch(console.error)
 
     if (!response) return
